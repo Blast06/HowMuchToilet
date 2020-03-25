@@ -1,6 +1,10 @@
 <resources>
+    <string name="title">How much toilet paper do i need?</string>
+    <string name="title3">" or "</string>
+    <string name="title2">"You will last %d days or %d%% of your quarantine "</string>
+    <string name="title22"> days</string>
+    <string name="title4">"  of your quarantine "</string>
     <string name="app_name">HowMuchToilet</string>
-    <string name="title">How Much Toilet do i need?</string>
-    <string name="title2">You will last</string>
-    <string name="title3">of your quarantine</string>
+    <string name="shareTxt">Share it!</string>
+
 </resources>

@@ -3,6 +3,7 @@ package com.dtapps.howmuchtoilet;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -20,7 +21,6 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
 
     private TextView title1;
     private TextView title2;
-    private TextView title3;
     private TextView rollsTxt;
     private TextView toiletTxt;
     private TextView wipesTxt;
@@ -38,15 +38,15 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        calcular(daysOfQuarantine, rolls, sheetsOnRolls,toilet,people,sheets,wipes);
+
 
 
         title1 = findViewById(R.id.title1);
         title2 = findViewById(R.id.title2);
-        title3 = findViewById(R.id.title3);
-        title2.setText(" You will last: " + days);
-        title3.setText(" Or: " + percent + " of your quarantine");
+        title2.setText(String.format(getString(R.string.title2), (int)days, (int)daysOfQuarantine));
 
+
+        calcular(daysOfQuarantine, rolls, sheetsOnRolls,toilet,people,sheets,wipes);
 
         rollsTxt = findViewById(R.id.rollsTxt);
         toiletTxt = findViewById(R.id.toiletTxt);
@@ -74,17 +74,11 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
         sheetsOnRollsBar.setOnSeekBarChangeListener(this);
 
         rollsBar.setProgress((int)rolls);
-
-
         toiletBar.setProgress((int)toilet);
         wipesBar.setProgress((int)wipes);
-
         peopleBar.setProgress((int)people);
-
         sheetsBar.setProgress((int)sheets);
-
         daysOfQuarantineBar.setProgress((int)daysOfQuarantine);
-
         sheetsOnRollsBar.setProgress((int)sheetsOnRolls);
 
 
@@ -106,8 +100,8 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
         totalSheets = rolls * sheetsOnRolls;
         days = Math.round(totalSheets / sheetsPerDay);
         percent = Math.round((days / daysOfQuarantine) * 100);
-        title2.setText(" You will last: " + days);
-        title3.setText(" Or: " + percent + " of your quarantine");
+        title2.setText(String.format(getString(R.string.title2), (int)days, (int)daysOfQuarantine));
+//        title3.setText(getString(R.string.title3) + percent +"% "  + getString(R.string.title4));
 
 
     }
@@ -118,32 +112,32 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
         switch (seekBar.getId()){
             case R.id.rollsBar:
                 rollsTxt.setText("Rolls you have: " + i);
-                calcular(daysOfQuarantine, rolls, sheetsOnRolls,toilet,people,sheets,wipes);
+                calcular(daysOfQuarantine, i, sheetsOnRolls,toilet,people,sheets,wipes);
                 break;
             case R.id.toiletBar:
                 toiletTxt.setText("Toilet visits: " + i);
-                calcular(daysOfQuarantine, rolls, sheetsOnRolls,toilet,people,sheets,wipes);
+                calcular(daysOfQuarantine, rolls, sheetsOnRolls,i,people,sheets,wipes);
                 break;
             case R.id.wipesBar:
                 wipesTxt.setText("Average wipes per trip: " + i);
-                calcular(daysOfQuarantine, rolls, sheetsOnRolls,toilet,people,sheets,wipes);
+                calcular(daysOfQuarantine, rolls, sheetsOnRolls,toilet,people,sheets,i);
                 break;
             case R.id.peoplesBar:
                 peopleTxt.setText("People in household: " + i);
-                calcular(daysOfQuarantine, rolls, sheetsOnRolls,toilet,people,sheets,wipes);
+                calcular(daysOfQuarantine, rolls, sheetsOnRolls,toilet,i,sheets,wipes);
                 break;
             case R.id.sheetsBar:
                 sheetsTxt.setText("Sheets per wipe: " + i);
-                calcular(daysOfQuarantine, rolls, sheetsOnRolls,toilet,people,sheets,wipes);
+                calcular(daysOfQuarantine, rolls, sheetsOnRolls,toilet,people,i,wipes);
                 break;
             case R.id.daysOfQuarantineBar:
                 daysOfQuarantineTxt.setText("Days of quarantine: " + i);
-                calcular(daysOfQuarantine, rolls, sheetsOnRolls,toilet,people,sheets,wipes);
+                calcular(i, rolls, sheetsOnRolls,toilet,people,sheets,wipes);
                 break;
 
             case R.id.sheetsOnRollsBar:
                 sheetsOnRollsTxt.setText("Sheets on roll: " + i);
-                calcular(daysOfQuarantine, rolls, sheetsOnRolls,toilet,people,sheets,wipes);
+                calcular(daysOfQuarantine, rolls, i,toilet,people,sheets,wipes);
                 break;
 
 

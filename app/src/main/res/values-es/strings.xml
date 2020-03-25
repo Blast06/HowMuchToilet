@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HowMuchToilet</string>
+    <string name="title2">Con esto duraras %d dias o %d%% de tu cuarentena</string>
+    <string name="title3">" o "</string>
+    <string name="title4">de tu cuarentena</string>
+    <string name="title">Cuanto papel necesito?</string>
+    <string name="title22">" dias"</string>
+    <string name="shareTxt">Compartelo!</string>
+</resources>
