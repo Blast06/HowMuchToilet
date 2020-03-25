@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title" />
+
+    <TextView
+        android:id="@+id/title2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title2" />
+
+<TextView
+        android:id="@+id/title3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title3" />
+
+    <Button
+        android:id="@+id/shareBtn"
+        android:layout_width="200dp"
+        android:layout_height="80dp"/>
+
+    <TextView
+        android:id="@+id/rollsTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!" />
+
+    <SeekBar
+        android:id="@+id/rollsBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:min="1"
+        android:max="200"
+        android:progress="10" />
+
+    <TextView
+        android:id="@+id/toiletTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!" />
+
+    <SeekBar
+        android:id="@+id/toiletBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:min="1"
+        android:max="40"
+        android:progress="3"
+        />
+
+    <TextView
+        android:id="@+id/daysOfQuarantineTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!" />
+
+    <SeekBar
+        android:id="@+id/daysOfQuarantineBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:min="1"
+        android:max="40"
+        android:progress="3"
+        />
+
+    <TextView
+        android:id="@+id/wipesTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!" />
+
+    <SeekBar
+        android:id="@+id/wipesBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:min="1"
+        android:max="10"
+        android:progress="3"
+        />
+
+    <TextView
+        android:id="@+id/peopleTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!" />
+
+    <SeekBar
+        android:id="@+id/peoplesBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:min="1"
+        android:max="10"
+        android:progress="3"
+        />
+
+    <TextView
+        android:id="@+id/sheetsTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!" />
+
+    <SeekBar
+        android:id="@+id/sheetsBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:min="1"
+        android:max="10"
+        android:progress="3"
+        />
+
+    <TextView
+        android:id="@+id/sheetsOnRollsTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!" />
+
+    <SeekBar
+        android:id="@+id/sheetsOnRollsBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:min="130"
+        android:max="1500"
+        android:progress="3"
+        />
+
+</LinearLayout>
