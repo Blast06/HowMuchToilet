@@ -7,4 +7,7 @@
     <string name="title">Cuanto papel necesito?</string>
     <string name="title22">" dias"</string>
     <string name="shareTxt">Compartelo!</string>
+    <string name="home">Home</string>
+    <string name="about">Sobre</string>
+    <string name="privacy">Politica de privacidad</string>
 </resources>

@@ -1,13 +1,20 @@
 package com.dtapps.howmuchtoilet;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
+import android.view.MenuItem;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBarChangeListener {
+import com.google.android.material.navigation.NavigationView;
+
+public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBarChangeListener, NavigationView.OnNavigationItemSelectedListener {
 
     private SeekBar rollsBar;
     private SeekBar toiletBar;
@@ -16,6 +23,15 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
     private SeekBar sheetsBar;
     private SeekBar sheetsOnRollsBar;
     private SeekBar daysOfQuarantineBar;
+
+    // nav vars
+    private  DrawerLayout drawerLayout;
+    private NavigationView navigationView;
+//    private Toolbar toolbar;
+
+
+
+
 
 
 
@@ -39,7 +55,19 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
         setContentView(R.layout.activity_main);
 
 
+        //
+        drawerLayout = findViewById(R.id.drawer_layout);
+        navigationView = findViewById(R.id.nav_view);
 
+
+
+        navigationView.bringToFront();
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, null,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+
+        navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setCheckedItem(R.id.nav_home);
 
         title1 = findViewById(R.id.title1);
         title2 = findViewById(R.id.title2);
@@ -107,6 +135,17 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
     }
 
     @Override
+    public void onBackPressed() {
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)){
+            drawerLayout.closeDrawer(GravityCompat.START);
+        }
+        else{
+            super.onBackPressed();
+        }
+
+    }
+
+    @Override
     public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
 
         switch (seekBar.getId()){
@@ -153,5 +192,24 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
     @Override
     public void onStopTrackingTouch(SeekBar seekBar) {
 
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+        switch (item.getItemId()){
+            case R.id.nav_home:
+                break;
+            case R.id.nav_privacy:
+                Intent intent = new Intent(MainActivity.this,PrivacyPolicy.class);
+                startActivity(intent);
+                break;
+            case R.id.nav_about:
+                Intent intent2 = new Intent(MainActivity.this,About.class);
+                startActivity(intent2);
+
+        }
+        drawerLayout.closeDrawer(GravityCompat.START);
+        return true;
     }
 }

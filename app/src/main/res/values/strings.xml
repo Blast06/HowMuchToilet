@@ -6,5 +6,28 @@
     <string name="title4">"  of your quarantine "</string>
     <string name="app_name">HowMuchToilet</string>
     <string name="shareTxt">Share it!</string>
+    <string name="home">Home</string>
+    <string name="about">About</string>
+    <string name="nav" translatable="false">closef</string>
+    <string name="navigation_drawer_open" translatable="false">Navigation Drawer open</string>
+    <string name="navigation_drawer_close" translatable="false">Navigation Drawer open</string>
+    <string name="privacy">privacy</string>
+    <string name="privacy_policy" translatable="false">
+        <b>DTApps</b> built the <b>HowMuchToilet</b> app as an Ad Supported app. This SERVICE is provided by
+        <b>DTApps</b> at no cost and is intended for use as is.
+    </string>
+    <string name="privacy_policy2" translatable="false">This page is used to inform visitors regarding my policies with the collection, use, and disclosure of Personal
+        Information if anyone decided to use my Service.</string>
+    <string name="privacy_policy3" translatable="false"> If you choose to use my Service, then you agree to the collection and use of information in relation to this policy.
+        The Personal Information that I collect is used for providing and improving the Service. I will not use or share
+        your information with anyone except as described in this Privacy Policy.</string>
+
+    <string name="privacy_policy4" translatable="false"> The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which is accessible at
+        <b>ManyToilet</b> unless otherwise defined in this Privacy Policy.</string>
+
+
+    <string name="about_txt" translatable="false">
+        Coronavirus Disease 2019 (COVID-19) is a disease that was identified in late 2019 and was declared a pandemic on March 11. COVID-19 is an international, national and NC public health emergency <a href="https://www.ncdhhs.gov/divisions/public-health/coronavirus-disease-2019-covid-19-response-north-carolina/what-covid-19">More info</a>
+    </string>
 
 </resources>

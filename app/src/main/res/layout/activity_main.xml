@@ -1,20 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity"
-    android:paddingHorizontal="20dp"
-    >
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
 
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/main_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:background="@color/cardview_light_background">
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="105dp"
+        android:layout_height="105dp"
         android:contentDescription="logo"
         android:src="@drawable/logo"
-        android:layout_marginBottom="5dp"
+        android:layout_marginBottom="2dp"
         android:layout_marginHorizontal="80dp"/>
     <TextView
         android:id="@+id/title1"
@@ -24,7 +41,7 @@
         android:height="10sp"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="5dp"
         android:layout_marginHorizontal="80dp"/>
 
 
@@ -37,7 +54,7 @@
         android:textSize="15sp"/>
 
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/shareBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -45,13 +62,15 @@
         android:layout_marginVertical="5dp"
         android:layout_marginHorizontal="90dp"
         style="?attr/materialButtonOutlinedStyle"
+        app:icon="@drawable/share_icon2"
+        app:iconSize="15dp"
         />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -62,7 +81,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Hello World!"
-                android:layout_marginBottom="20dp"/>
+                android:layout_marginBottom="20dp"
+                />
 
             <SeekBar
                 android:id="@+id/rollsBar"
@@ -71,14 +91,16 @@
                 android:min="1"
                 android:max="200"
                 android:progress="10"
-                android:layout_marginBottom="20dp"/>
+                android:layout_marginBottom="20dp"
+                android:layout_below="@id/rollsTxt"/>
 
             <TextView
                 android:id="@+id/toiletTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Hello World!"
-                android:layout_marginBottom="20dp"/>
+                android:layout_marginBottom="20dp"
+                android:layout_below="@id/rollsBar"/>
 
             <SeekBar
                 android:id="@+id/toiletBar"
@@ -88,6 +110,7 @@
                 android:max="40"
                 android:progress="3"
                 android:layout_marginBottom="20dp"
+                android:layout_below="@id/toiletTxt"
                 />
 
             <TextView
@@ -95,7 +118,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Hello World!"
-                android:layout_marginBottom="20dp"/>
+                android:layout_marginBottom="20dp"
+                android:layout_below="@id/toiletBar"/>
 
             <SeekBar
                 android:id="@+id/daysOfQuarantineBar"
@@ -105,6 +129,7 @@
                 android:max="40"
                 android:progress="3"
                 android:layout_marginBottom="20dp"
+                android:layout_below="@id/daysOfQuarantineTxt"
                 />
 
             <TextView
@@ -112,7 +137,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Hello World!"
-                android:layout_marginBottom="20dp"/>
+                android:layout_marginBottom="20dp"
+                android:layout_below="@id/daysOfQuarantineBar"/>
 
             <SeekBar
                 android:id="@+id/wipesBar"
@@ -122,6 +148,7 @@
                 android:max="10"
                 android:progress="3"
                 android:layout_marginBottom="20dp"
+                android:layout_below="@id/wipesTxt"
                 />
 
             <TextView
@@ -129,7 +156,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Hello World!"
-                android:layout_marginBottom="20dp"/>
+                android:layout_marginBottom="20dp"
+                android:layout_below="@id/wipesBar"/>
 
             <SeekBar
                 android:id="@+id/peoplesBar"
@@ -139,6 +167,7 @@
                 android:max="10"
                 android:progress="3"
                 android:layout_marginBottom="20dp"
+                android:layout_below="@id/peopleTxt"
                 />
 
             <TextView
@@ -146,7 +175,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Hello World!"
-                android:layout_marginBottom="20dp"/>
+                android:layout_marginBottom="20dp"
+                android:layout_below="@id/peoplesBar"/>
 
             <SeekBar
                 android:id="@+id/sheetsBar"
@@ -156,6 +186,7 @@
                 android:max="10"
                 android:progress="3"
                 android:layout_marginBottom="20dp"
+                android:layout_below="@id/sheetsTxt"
                 />
 
             <TextView
@@ -163,7 +194,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Hello World!"
-                android:layout_marginBottom="20dp"/>
+                android:layout_marginBottom="20dp"
+                android:layout_below="@id/sheetsBar"/>
 
             <SeekBar
                 android:id="@+id/sheetsOnRollsBar"
@@ -173,12 +205,15 @@
                 android:max="1500"
                 android:progress="3"
                 android:layout_marginBottom="20dp"
+                android:layout_below="@id/sheetsOnRollsTxt"
                 />
 
 
-        </LinearLayout>
+        </RelativeLayout>
 
     </ScrollView>
 
+    </LinearLayout>
 
-</LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>
