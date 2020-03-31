@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".PrivacyPolicy"
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
@@ -16,41 +16,49 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        />
+        >
+
+    </com.google.android.material.navigation.NavigationView>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="4dp">
 
         <TextView
             android:id="@+id/privacy_txt_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/privacy_policy"
-            android:layout_marginTop="5dp"/>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="@string/privacy_policy" />
 
         <TextView
             android:id="@+id/privacy_txt_view2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:text="@string/privacy_policy2"
-            android:layout_marginTop="5dp"/>
+            android:visibility="visible"
+            tools:visibility="visible" />
 
         <TextView
             android:id="@+id/privacy_txt_view3"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/privacy_policy3"
-            android:layout_marginTop="5dp"/>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="@string/privacy_policy3" />
 
         <TextView
             android:id="@+id/privacy_txt_view4"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/privacy_policy4"
-            android:layout_marginTop="5dp"/>
-
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="@string/privacy_policy4" />
 
     </LinearLayout>
 

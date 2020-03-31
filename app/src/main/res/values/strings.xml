@@ -12,6 +12,21 @@
     <string name="navigation_drawer_open" translatable="false">Navigation Drawer open</string>
     <string name="navigation_drawer_close" translatable="false">Navigation Drawer open</string>
     <string name="privacy">privacy</string>
+
+    <string name="play_store_link">Download it here: https://play.google.com/store/apps/details?id=</string>
+
+    <string name="how_much_toilet_i_need">This is how much toilet paper i need</string>
+    <string name="share_subject">Share via</string>
+    <string name="rolls_Txt">Rolls you have: %d</string>
+    <string name="toilet_txt">Toilet visits: %d</string>
+    <string name="wipes_txt">Average wipes per trip: %d</string>
+    <string name="people_txt">People in household: %d</string>
+    <string name="sheets_txt">Sheets per wipe: %d</string>
+    <string name="days_quarantine_txt">Days of quarantine: %d</string>
+    <string name="sheets_on_rolls_txt">Sheets on roll: %d</string>
+
+
+    <string name="banner_id_1" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
     <string name="privacy_policy" translatable="false">
         <b>DTApps</b> built the <b>HowMuchToilet</b> app as an Ad Supported app. This SERVICE is provided by
         <b>DTApps</b> at no cost and is intended for use as is.
@@ -29,5 +44,20 @@
     <string name="about_txt" translatable="false">
         Coronavirus Disease 2019 (COVID-19) is a disease that was identified in late 2019 and was declared a pandemic on March 11. COVID-19 is an international, national and NC public health emergency <a href="https://www.ncdhhs.gov/divisions/public-health/coronavirus-disease-2019-covid-19-response-north-carolina/what-covid-19">More info</a>
     </string>
+
+<!--    REAL ADS-->
+    <string name="APP_ID" translatable="false">ca-app-pub-4473546092325949~4615295334</string>
+
+<!--    TEXT ADS-->
+<!--    <string name="APP_ID" translatable="false">ca-app-pub-3940256099942544~3347511713</string>-->
+
+<!--    REAL ADS-->
+    <string name="ad_interstitial_splash" translatable="false">ca-app-pub-4473546092325949/7545738678</string>
+    <string name="permission_txt">Permission DENIED</string>
+
+    <!--    TEXT ADS-->
+<!--    <string name="ad_interstitial_splash" translatable="false">ca-app-pub-3940256099942544/1033173712</string>-->
+
+
 
 </resources>

@@ -10,4 +10,16 @@
     <string name="home">Home</string>
     <string name="about">Sobre</string>
     <string name="privacy">Politica de privacidad</string>
+
+    <string name="how_much_toilet_i_need">This is how much toilet paper i need</string>
+    <string name="share_subject">Share via</string>
+    <string name="rolls_Txt">Rolls you have: %d</string>
+    <string name="toilet_txt">Toilet visits: %d</string>
+    <string name="wipes_txt">Average wipes per trip: %d</string>
+    <string name="people_txt">People in household: %d</string>
+    <string name="sheets_txt">Sheets per wipe: %d</string>
+    <string name="days_quarantine_txt">Days of quarantine: %d</string>
+    <string name="sheets_on_rolls_txt">Sheets on roll: %d</string>
+    <string name="permission_txt">PERMISOS NEGADOS</string>
+    <string name="play_store_link">Descargala aqui: https://play.google.com/store/apps/details?id=</string>
 </resources>

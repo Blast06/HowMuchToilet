@@ -19,6 +19,9 @@ public class PrivacyPolicy extends AppCompatActivity implements NavigationView.O
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
     private TextView privacyText;
+    private TextView privacyText2;
+    private TextView privacyText3;
+    private TextView privacyText4;
 
 
     @Override
@@ -28,6 +31,9 @@ public class PrivacyPolicy extends AppCompatActivity implements NavigationView.O
 
         navigationView = findViewById(R.id.nav_view);
         privacyText = findViewById(R.id.privacy_txt_view);
+        privacyText2 = findViewById(R.id.privacy_txt_view2);
+        privacyText3 = findViewById(R.id.privacy_txt_view3);
+        privacyText4 = findViewById(R.id.privacy_txt_view4);
 
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.setCheckedItem(R.id.nav_privacy);
